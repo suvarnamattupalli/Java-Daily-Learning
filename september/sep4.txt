@@ -1,0 +1,171 @@
+stop iteration at digit zero and print sum
+		int num=60756784,count=0,rem=0,sum=0;
+		while(num!=0)
+		{
+			count++;
+			rem=num%10;
+			if(rem==0)
+			{
+				break;
+			}
+			num/=10;			
+		}
+			if(count>5)
+			{
+				System.out.println("Large Number");
+			}
+			else
+			{
+				sum+=rem;
+				System.out.println(sum);
+						
+			}
+
+
+
+print digit at iteration 3
+		int num=809122,count=0,rem=0,sum=0;
+		while(num!=0)
+		{
+			count++;
+			rem=num%10;
+			if(count==3)
+				System.out.println(rem);
+			num/=10;			
+		}
+
+
+Addition of odd digits in a number
+		int num=8095122,count=0,rem=0,sum=0;
+		while(num!=0)
+		{
+			count++;
+			rem=num%10;
+			if(rem%2!=0)
+			{
+			sum+=rem;
+			}
+			num/=10;
+		}
+		System.out.println(sum);
+
+
+check if digit 7 present or not
+
+with boolean
+		int num=60543,count=0,rem=0;
+		boolean status=false;
+		while(num!=0)
+		{
+			rem=num%10;
+			if(rem==7)
+				status=true;
+			num/=10;	
+		}
+		if(status==true)
+			System.out.println("7 is present");
+		else
+			System.out.println("7 is not present");
+		
+Boolean,ternary,break
+		int num=60543,count=0,rem=0;
+		boolean status=false;
+		while(num!=0)
+		{
+			rem=num%10;
+			if(rem==7)
+			{
+				status=true;
+				break;
+			}
+			num/=10;	
+		}
+		System.out.println((status==true)?("7 is present"):("7 is not present"));
+
+
+first and last digit sum
+
+without count 
+	int num=476732,count=0,rem=o;
+	int temp=num%10;
+	while(num!=0)
+	{ rem=num%10; num/=10; }
+	sysout(temp+rem);
+
+with count known
+		int num=1249,rem=0,count=0,sum=0;
+		while(num!=0)
+		{
+		++count;
+		rem=num%10;
+		if(count==1 || count==4)
+			sum+=rem;
+		num/=10;
+		}
+		System.out.print(sum);
+
+
+with count,not known
+		int num=1249,rem=0,count1=0,count2=0,sum=0,temp=num;
+		while(num!=0)
+		{
+		++count1;
+		num/=10;
+		}
+	
+		while(temp!=0)
+		{
+		++count2;
+		rem=temp%10;
+		if(count2==1 || count2==count1)
+			sum+=rem;
+		temp/=10;
+		}
+		System.out.print(sum);
+	}
+
+count no of odd digits are present
+		int num=1235498,rem=0,count=0;
+		while(num!=0)
+		{
+		rem=num%10;
+		if(rem%2!=0)
+			count++;
+		num/=10;
+		}
+		System.out.println(count);
+
+div digit into half and sum it,then check if sum is palindrome or not
+		long num=123456789123l,count=0,temp=num,rem=0,c=0,quo=0,sum=0,rev=0,s_num=0;
+		while(num!=0)
+		{
+			count++;
+			num/=10;
+		}
+		
+		c=(long)(Math.pow(10,count/2));
+
+		quo=temp/c;
+		rem=temp%c;
+
+		System.out.println("first half: "+quo+"\tSecond half: "+rem);
+
+		sum=quo+rem;
+
+		System.out.println("Sum: "+sum);
+
+		s_num=sum;
+		while(sum!=0)
+		{
+			rem=sum%10;
+			rev=rev*10+rem;
+			sum/=10;
+		}
+		System.out.println("Reverse: "+rev);
+		System.out.println((s_num==rev)?("Palindrome"):("Not Palindrome"));
+
+
+
+12345 check if it is in increasing order
+1245 print missing num
+

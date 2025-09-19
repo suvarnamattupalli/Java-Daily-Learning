@@ -1,0 +1,185 @@
+		int number=35,count=0,sum=0;
+		for(int x=2;x<=number/2;x++)
+		{
+			if(number%x==0)
+			{
+				count++;
+				System.out.println(x);
+			}
+		}
+		if(count==0)
+		System.out.println("prime number "+count);
+		else
+		System.out.println("not prime number "+count);
+		
+
+class ch
+{
+	public static void main(String args[])
+	{
+		int num=15,sq=0,cube=0;
+		for(int x=1;x<=num;x++)
+		{
+			sq=(int)Math.pow(x,2);
+			cube=(int)Math.pow(x,3);
+			System.out.println(x+"-"+sq+"-"+cube);	
+		}
+
+	}
+}
+
+
+
+		int num=2;
+		for(int x=1;x<=10;x++)
+		{
+			System.out.println(num+"*"+x+"="+num*x);
+		}
+
+		int num=2;
+		for(int x=1;x<=10;x++)
+		{
+			if(x%2==0)
+			System.out.println(num+"*"+x+"="+num*x);
+		}
+			
+
+		int num=2;
+		for(int x=1;x<=10;x++)
+		{
+			if(x%2!=0)
+			System.out.println(num+"*"+x+"="+num*x);
+		}
+
+		int num=5,sum=0;
+		for(int x=1;x<=10;x++)
+		{
+			if(x%2!=0)
+			{
+				
+				sum+=num*x;
+				System.out.println(sum);
+			}
+		}
+		System.out.println(sum%2==0?("EVEN"):("ODD"));//odd
+
+		int num=7;
+		for(int x=1;x<=10;x++)
+		{
+			if(x%2==0)
+			{
+				System.out.println(num+"*"+x+"="+num*x);
+			}
+		}
+7*2=14
+7*4=28
+7*6=42
+7*8=56
+7*10=70
+
+
+		int num=3,sum=0,mul=0,count=0;
+		for(int x=1;x<=10;x++)
+		{
+			mul=num*x;
+			System.out.println(num+"*"+x+"="+mul);
+			if(x%2!=0)
+			{
+				sum+=mul;
+			}
+		}
+		System.out.println(num+" Table Odd result sum: "+sum);
+		for(int i=2;i<=sum/2;i++)
+		{
+			if(sum%i==0)
+			{
+				count++;
+				break;
+			}
+		}
+		System.out.println(count<1?"Prime":"Not Prime");
+3*1=3
+3*2=6
+3*3=9
+3*4=12
+3*5=15
+3*6=18
+3*7=21
+3*8=24
+3*9=27
+3*10=30
+3 Table Odd result sum: 75
+Not Prime
+
+		int num=15,mul=0,x;
+		boolean status=false;
+		for(x=1;x<=15;x++)
+		{
+			mul=num*x;
+			if((Math.sqrt(mul))%1==0)
+			{	
+				status=true;							
+				System.out.println(num+"*"+ x +"="+ mul);
+			}
+		}
+			if(status!=true)
+			System.out.println("NO perfect square");
+		
+15*15=225
+
+		int count=0;
+		for(int x=2400;x>=1600;x--)
+		{
+			if(x%4==0 && x%100!=0 || x%400==0)
+			{
+				count++;
+				//System.out.println(x);
+			}
+		}
+		System.out.println(count);
+195
+
+		int count1=0,count2=0,count3=0,count4=0;
+		for(int i=65;i<=100;i++)
+		{
+			if(i>='A' && i<='Z' || i>='a' && i<='z')
+			{
+				count1++;
+			}
+			else if(i>='0' && i<='9')
+			{
+				count2++;
+			}
+			else if(i==' ')
+			{
+				count3++;
+			}
+			else
+			{
+				count4++;
+			}
+		}
+System.out.println("Alphabets "+count1);	
+System.out.println("Digits "+count2);
+System.out.println("Space "+count3);
+System.out.println("Symbols "+count4);
+Alphabets 30
+Digits 0
+Space 0
+Symbols 6
+
+
+		int x,y,count=0;
+		char ch1,ch2;
+		for(x=65,y=97;x<=90 && y<=122; x++,y++)
+		{
+			ch1=(char)x;
+			ch2=(char)y;
+			if(ch1!='A'&& ch1!='E' && ch1!='I' && ch1!='O' && ch1!='U' )
+			count++;
+			if(ch2!='a'&& ch2!='e' && ch2!='i' && ch2!='o' && ch2!='u')
+			count++;
+		}
+		System.out.println(count);
+
+42
