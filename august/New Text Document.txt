@@ -1,0 +1,44 @@
+class Main 
+{
+	public static void main(String args[])
+	{
+		int payment=10000;
+		String p_mode,t_mode;
+		double disount=0;
+
+		String p_mode="online";
+		//String p_mode="offline";
+		String t_mode="upi";
+		//String t_mode="cash";
+		//String t_mode="card";
+		//String t_mode="Both";
+		
+		if(p_mode="online")
+		{
+			if(t_mode="upi")
+			{
+				discount=15.0/100*payment; //upi
+			}else
+			{
+				discount=10.0/100*payment; //card or wallet
+
+			}
+		}else if(p_mode="offline")
+		{
+			if(t_mode="upi")
+			{
+			discount=5.0/100*payment; //upi
+			}else
+			{
+			discount=2.0/100*payment; //cash
+		}else
+		{
+			discount=0; //Half online and remaining offline
+		}
+		System.out.println("Payment amount = "+ payment-discount);
+	}
+}
+
+
+
+
