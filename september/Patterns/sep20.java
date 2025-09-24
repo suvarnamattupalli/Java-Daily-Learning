@@ -1,4 +1,4 @@
-class P1
+class Q1
 {
 	public static void main(String args[])
 	{
@@ -23,7 +23,7 @@ class P1
 2345
 12345*/
 
-class P2
+class Q2
 {
 	public static void main(String args[])
 	{
@@ -47,7 +47,7 @@ BC
 DEF
 GHIJ*/
 
-class P3
+class Q3
 {
 	public static void main(String args[])
 	{
@@ -79,7 +79,7 @@ class P3
 4  1
 54321*/
 
-class P4
+class Q4
 {
 	public static void main(String args[])
 	{
@@ -115,7 +115,7 @@ eFf
 Gg
 H*/
 
-class P5
+class Q5
 {
 	public static void main(String args[])
 	{
@@ -150,7 +150,7 @@ class P5
 54321*/
 
 
-class P6
+class Q6
 {
 	public static void main(String args[])
 	{
@@ -184,7 +184,7 @@ class P6
 1  4
 12345*/
 
-class P7
+class Q7
 {
 	public static void main(String args[])
 	{
@@ -207,7 +207,7 @@ class P7
 16 25 36
 49 64 81 100*/
 
-class P8
+class Q8
 {
 	public static void main(String args[])
 	{
@@ -231,7 +231,7 @@ class P8
 1 4 9
 1 4 9 16*/
 
-class P9
+class Q9
 {
 	public static void main(String args[])
 	{
@@ -255,20 +255,33 @@ class P9
 8 10 12
 14 16 18 20*/
 
-class P10
+class Q10
 {
 	public static void main(String args[])
 	{
 		int rows=5;
-		for(int r =1;r<=rows;r++)
+		int first=rows/2;
+		int second=rows-first;
+		for(int r =1;r<=first;r++)
 		{
-			for(int c=1;c<=rows-2;c++)
+			for(int c=1;c<=r;c++)
 			{
-				if(r==c || r+c==rows+1)
+				if(r==c)
 				System.out.print(1+" ");	
 				else
-				System.out.print(0+" ");
-					
+				System.out.print(0+" ");		
+			}
+			
+			System.out.println(" ");
+		}
+		for(int i=1;i<=second;i++)
+		{
+			for(int j=second;j>=i;j--)
+			{
+				if(i==j)
+				System.out.print(1+" ");	
+				else
+				System.out.print(0+" ");		
 			}
 			
 			System.out.println(" ");
@@ -276,3 +289,46 @@ class P10
 
 	}
 }
+/*Output
+1
+0 1
+0 0 1
+0 1
+1*/
+
+class Q11
+{
+	public static void main(String args[])
+	{
+		int rows=7,first=rows/2+1,temp=1;
+		for(int r=1;r<=first;r++)
+		{	temp=r;
+			for(int c=1;c<=r;c++)
+			{	
+				int sq=(int)(Math.pow(temp,2));
+				System.out.print(sq<10?sq:0);
+				temp--;
+			}
+			System.out.println("");
+		}
+		
+		for(int r=1;r<=rows-first;r++)
+		{	temp=rows-first-r+1;
+			for(int c=rows-first;c>=r;c--)
+			{	
+				int sq=(int)(Math.pow(temp,2));
+				System.out.print(sq);
+				temp--;
+			}
+			System.out.println("");
+		}
+	}
+}
+/*Output
+1
+41
+941
+0941
+941
+41
+1*/

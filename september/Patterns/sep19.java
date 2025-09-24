@@ -503,3 +503,11 @@ class P18
 16 25 36
 49 64 81 100*/
 
+class P19
+{
+	public static void main(String args[])
+	{
+			
+	}
+}
+
