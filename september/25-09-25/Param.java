@@ -1,4 +1,4 @@
-class ch
+class Param
 { 	
 	void noReturn(int num)
 		{
@@ -11,8 +11,8 @@ class ch
 		}
 	public static void main(String args[])
 	{
-			ch c=new ch();
-			c.noReturn(3);
-			System.out.print(c.calAdd(3,2));
+			Param p=new Param();
+			p.noReturn(3);
+			System.out.print(p.calAdd(3,2));
 	}
 }
