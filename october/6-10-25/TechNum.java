@@ -1,10 +1,10 @@
 import java.util.Scanner;
-class ch
+class TechNum
 { 	
 	
 	int countDigit(int num)
 	{
-		int count=0;
+		int count=0; //dec and init as local varibale to reuse after return
 		while(num!=0)
 		{
 			count++;
@@ -12,24 +12,24 @@ class ch
 		}
 		return count;
 	}
-	int splitNum(int num)
+	int splitNum(int num,int count)
 	{
-		int count=countDigit(num);
 		int n1=num/(int)Math.pow(10,count/2);
 		int n2=num%(int)Math.pow(10,count/2);
 		return n1+n2;
 	}
-	String checkTech(int num)
+	String checkTech(int num,int sum)
 	{
-		int sum=splitNum(num);
 		return sum*sum==num?"Technology Num":"Not Technology Num";
 	}
 	public static void main(String a[])
 	{
-		ch t=new ch();
+		TechNum t=new TechNum();
 		Scanner sc= new Scanner(System.in);
 		System.out.print("Enter num:");
 		int num=sc.nextInt();
-		System.out.println(t.checkTech(num)); //3025 //2025 //9801
+		int count=t.countDigit(num);
+		int sum=t.splitNum(num,count);
+		System.out.println(t.checkTech(num,sum));
 	}
 }

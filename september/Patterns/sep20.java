@@ -332,3 +332,16 @@ class Q11
 941
 41
 1*/
+
+class Q12
+{
+	public static void main(String args[])
+	{
+		int rows=7;
+		int half_rows=rows/2;
+		for(int r=1;r<=rows;r++)
+		{
+			for(int c=r)
+		}
+	}
+}

@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class ch
+class Technology
 { 	
 	
 	int countDigit(int num)
@@ -26,7 +26,7 @@ class ch
 	}
 	public static void main(String a[])
 	{
-		ch t=new ch();
+		Technology t=new Technology();
 		Scanner sc= new Scanner(System.in);
 		System.out.print("Enter num:");
 		int num=sc.nextInt();
