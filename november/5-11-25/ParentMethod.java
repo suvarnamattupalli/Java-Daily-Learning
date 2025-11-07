@@ -4,7 +4,7 @@ class ParentMethod
 	{
 		Child child=new Child(21,"Suvarna");
 		System.out.println(child.printInfo());
-		//System.out.println(child.printInfo()); //We cannot access parent class method like this if both has same methods
+		//System.out.println(child.printInfo()); //We cannot access parent class method like this if both has same methodname & datatype
 		System.out.println(child.printInt()); //If diff method then we can access like this.
 	}
 }
@@ -23,11 +23,6 @@ class Child extends Parent
 		System.out.println(super.printInfo()); //We need to use super.method();
 		return age+" "+name;
 	}
-	/*int printInt()
-	{
-	   System.out.println(super.printInt());
-		return age;
-	}*/
 }
 class Parent
 {
